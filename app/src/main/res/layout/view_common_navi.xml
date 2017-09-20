@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ec_common_navi"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimens_dp_45">
+
+    <TextView
+        android:id="@+id/ec_common_navi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:maxEms="11"
+        android:singleLine="true"
+        android:text="" />
+
+    <!--</LinearLayout>-->
+    <ImageView
+        android:id="@+id/ec_common_title_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ec_common_navi_title"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ec_common_navi_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text=""
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ec_common_left_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:paddingLeft="@dimen/dimens_dp_13"
+        android:paddingRight="@dimen/dimens_dp_13"
+        android:src="@mipmap/turn_left_white"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/ec_common_right_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:paddingLeft="@dimen/dimens_dp_13"
+        android:paddingRight="@dimen/dimens_dp_13"
+        android:src="@mipmap/turn_right_white"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ec_common_navi_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimens_dp_13"
+        android:paddingRight="@dimen/dimens_dp_13"
+        android:textColor="@color/ec_white"
+        android:textSize="@dimen/dimens_sp_15"
+        android:visibility="gone" />
+</RelativeLayout>
