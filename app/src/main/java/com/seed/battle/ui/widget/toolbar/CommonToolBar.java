@@ -10,8 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.aiju.ecbao.R;
-import com.aiju.ecbao.utils.StringUtil;
+import com.seed.battle.R;
 
 
 /**
@@ -214,7 +213,7 @@ public class CommonToolBar extends LinearLayout implements View.OnClickListener 
      */
     public void setLeftTitle(String title) {
         showLeftTextView();
-        leftTextView.setText(StringUtil.textIsNull(title, ""));
+        leftTextView.setText(title);
     }
 
 
@@ -237,7 +236,7 @@ public class CommonToolBar extends LinearLayout implements View.OnClickListener 
      */
     public void setrightTitle(String title) {
         showRightTextView();
-        rightTextView.setText(StringUtil.textIsNull(title, ""));
+        rightTextView.setText(title);
     }
 
 

@@ -12,7 +12,6 @@ import android.widget.Toast;
 import com.git.navmenu.NavMenuLayout;
 import com.seed.battle.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(int position) {
 //                mViewPager.setCurrentItem(position);//选中后切换viwepager
-
+                switchFragment(position);
                 Toast.makeText(MainActivity.this, "选中了-> " + textRes[position], Toast.LENGTH_SHORT).show();
             }
         });
@@ -85,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
         mHomeFragment = HomeFragment.newInstance("home", "home");
         mVideoFragment = HomeFragment.newInstance("video", "video");
         mMeFragment = HomeFragment.newInstance("me", "me");
+        getTransaction().add(R.id.main_content, mHomeFragment).commit();
+        getTransaction().add(R.id.main_content, mVideoFragment).commit();
+        getTransaction().add(R.id.main_content, mMeFragment).commit();
+        switchFragment(0);
     }
 
     private void switchFragment(int position){

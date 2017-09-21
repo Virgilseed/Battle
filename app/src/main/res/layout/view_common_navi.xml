@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ec_common_navi"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dimens_dp_45">
+    android:layout_height="@dimen/dimen_45_dp"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/ec_common_navi_title"
@@ -11,8 +12,9 @@
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:maxEms="11"
-        android:singleLine="true"
-        android:text="" />
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_18_sp"
+        android:text="ssssssss" />
 
     <!--</LinearLayout>-->
     <ImageView
@@ -38,9 +40,8 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:paddingLeft="@dimen/dimens_dp_13"
-        android:paddingRight="@dimen/dimens_dp_13"
-        android:src="@mipmap/turn_left_white"
+        android:paddingLeft="@dimen/dimen_13_dp"
+        android:paddingRight="@dimen/dimen_13_dp"
         android:visibility="gone" />
 
 
@@ -51,9 +52,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:paddingLeft="@dimen/dimens_dp_13"
-        android:paddingRight="@dimen/dimens_dp_13"
-        android:src="@mipmap/turn_right_white"
+        android:paddingLeft="@dimen/dimen_13_dp"
+        android:paddingRight="@dimen/dimen_13_dp"
         android:visibility="gone" />
 
     <TextView
@@ -64,9 +64,8 @@
         android:layout_centerVertical="true"
         android:clickable="true"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/dimens_dp_13"
-        android:paddingRight="@dimen/dimens_dp_13"
-        android:textColor="@color/ec_white"
-        android:textSize="@dimen/dimens_sp_15"
+        android:paddingLeft="@dimen/dimen_13_dp"
+        android:paddingRight="@dimen/dimen_13_dp"
+        android:textSize="@dimen/dimen_15_sp"
         android:visibility="gone" />
 </RelativeLayout>
