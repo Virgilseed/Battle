@@ -1,40 +1,42 @@
-package com.seed.battle.ui;
+package com.seed.battle.ui.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.git.navmenu.NavMenuLayout;
 import com.seed.battle.R;
+import com.seed.battle.ui.BaseActivity;
+import com.seed.battle.ui.fragment.HomeFragment;
+import com.seed.battle.ui.fragment.UserFragment;
+import com.seed.battle.ui.fragment.VideoFragment;
 
 import java.util.List;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
-
-    @BindView(R.id.main_content)
-    FrameLayout mainContent;
-    @BindView(R.id.v_line)
-    View vLine;
-    @BindView(R.id.nav_layout)
-    NavMenuLayout mNavMenuLayout;
+public class MainActivity extends BaseActivity {
 
     List<Fragment> listFragment;
+    @Bind(R.id.main_content)
+    FrameLayout mMainContent;
+    @Bind(R.id.v_line)
+    View mVLine;
+    @Bind(R.id.nav_layout)
+    NavMenuLayout mNavMenuLayout;
 
     private int[] iconRes = {R.mipmap.ic_home_normal, R.mipmap.ic_home_normal, R.mipmap.ic_me_normal};
     private int[] iconResSelected = {R.mipmap.ic_home_selected, R.mipmap.ic_home_selected, R.mipmap.ic_me_select};
     private String[] textRes = {"首页", "视频", "我"};
     private HomeFragment mHomeFragment;
-    private HomeFragment mVideoFragment;
-    private HomeFragment mMeFragment;
+    private VideoFragment mVideoFragment;
+    private UserFragment mMeFragment;
 
 
     @Override
@@ -82,16 +84,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mHomeFragment = HomeFragment.newInstance("home", "home");
-        mVideoFragment = HomeFragment.newInstance("video", "video");
-        mMeFragment = HomeFragment.newInstance("me", "me");
+        mVideoFragment = VideoFragment.newInstance("video", "video");
+        mMeFragment = UserFragment.newInstance("me", "me");
         getTransaction().add(R.id.main_content, mHomeFragment).commit();
         getTransaction().add(R.id.main_content, mVideoFragment).commit();
         getTransaction().add(R.id.main_content, mMeFragment).commit();
         switchFragment(0);
     }
 
-    private void switchFragment(int position){
-        switch (position){
+    private void switchFragment(int position) {
+        switch (position) {
             case 0:
                 getTransaction().show(mHomeFragment).hide(mVideoFragment).hide(mMeFragment).commit();
                 break;
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private FragmentTransaction getTransaction(){
+    private FragmentTransaction getTransaction() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         return fragmentManager.beginTransaction();
     }
@@ -113,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
     public void onViewClicked() {
 
     }
-
 
 
 }

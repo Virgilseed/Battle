@@ -1,4 +1,4 @@
-package com.seed.battle.ui;
+package com.seed.battle.ui.fragment;
 
 
 import android.os.Bundle;
@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.seed.battle.R;
+import com.seed.battle.ui.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";

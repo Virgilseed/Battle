@@ -14,7 +14,7 @@
         android:maxEms="11"
         android:textColor="@color/white"
         android:textSize="@dimen/dimen_18_sp"
-        android:text="ssssssss" />
+        android:text="" />
 
     <!--</LinearLayout>-->
     <ImageView

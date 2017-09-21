@@ -13,9 +13,7 @@ import android.widget.TextView;
 import com.seed.battle.R;
 
 
-/**
- * Created by Administrator on 2016/1/19.
- */
+
 public class CommonToolBar extends LinearLayout implements View.OnClickListener {
 
     private Context mContext;
