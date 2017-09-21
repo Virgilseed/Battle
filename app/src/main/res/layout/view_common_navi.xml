@@ -15,46 +15,42 @@
         android:textColor="@color/white"
         android:textSize="@dimen/dimen_18_sp"
         android:text="" />
-
-    <!--</LinearLayout>-->
-    <ImageView
-        android:id="@+id/ec_common_title_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/ec_common_navi_title"
-        android:visibility="gone" />
-
     <TextView
         android:id="@+id/ec_common_navi_left"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:gravity="center"
-        android:text=""
-        android:visibility="gone" />
+        android:text="返回"
+        android:visibility="gone"
+        android:textSize="@dimen/dimen_16_sp"
+        android:paddingLeft="@dimen/dimen_12_dp"
+        android:paddingRight="@dimen/dimen_12_dp"
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/ec_common_left_back"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dimen_48_dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:paddingLeft="@dimen/dimen_13_dp"
-        android:paddingRight="@dimen/dimen_13_dp"
-        android:visibility="gone" />
+        android:paddingTop="@dimen/dimen_10_dp"
+        android:paddingBottom="@dimen/dimen_10_dp"
+        android:paddingLeft="@dimen/dimen_12_dp"
+        android:paddingRight="@dimen/dimen_12_dp"
+        android:src="@mipmap/nav_back_normal"/>
 
 
     <ImageView
         android:id="@+id/ec_common_right_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dimen_48_dp"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:clickable="true"
-        android:paddingLeft="@dimen/dimen_13_dp"
-        android:paddingRight="@dimen/dimen_13_dp"
-        android:visibility="gone" />
+        android:paddingLeft="@dimen/dimen_12_dp"
+        android:paddingRight="@dimen/dimen_12_dp"
+        android:src="@mipmap/more_line"/>
 
     <TextView
         android:id="@+id/ec_common_navi_right"
@@ -63,9 +59,11 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:clickable="true"
+        android:text="消息"
+        android:visibility="gone"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/dimen_13_dp"
-        android:paddingRight="@dimen/dimen_13_dp"
-        android:textSize="@dimen/dimen_15_sp"
-        android:visibility="gone" />
+        android:paddingLeft="@dimen/dimen_12_dp"
+        android:paddingRight="@dimen/dimen_12_dp"
+        android:textSize="@dimen/dimen_16_sp"
+        android:textColor="@color/white"/>
 </RelativeLayout>
