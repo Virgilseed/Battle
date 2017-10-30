@@ -14,19 +14,25 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 
 
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
     protected static String TAG = "BaseFragment";
     private ProgressDialog mProgressDialog;
 
-    public static BaseFragment newInstance(String param1, String param2) {
-        BaseFragment baseFragment = new BaseFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString("param1", param1);
-        bundle.putString("param2", param2);
-        baseFragment.setArguments(bundle);
-        return baseFragment;
-    }
+    protected abstract void initData();
+
+    protected abstract void initView();
+
+    protected abstract void initEvent();
+
+//    public static BaseFragment newInstance(String param1, String param2) {
+//        BaseFragment baseFragment = new BaseFragment();
+//        Bundle bundle = new Bundle();
+//        bundle.putString("param1", param1);
+//        bundle.putString("param2", param2);
+//        baseFragment.setArguments(bundle);
+//        return baseFragment;
+//    }
 
     @Override
     public void onAttach(Context context) {
@@ -47,13 +53,14 @@ public class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
+        initData();
+        initView();
+        initEvent();
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     protected boolean showLoading() {

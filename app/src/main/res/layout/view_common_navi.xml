@@ -50,7 +50,7 @@
         android:clickable="true"
         android:paddingLeft="@dimen/dimen_12_dp"
         android:paddingRight="@dimen/dimen_12_dp"
-        android:src="@mipmap/more_line"/>
+        android:src="@mipmap/icon_nav_setup_white"/>
 
     <TextView
         android:id="@+id/ec_common_navi_right"

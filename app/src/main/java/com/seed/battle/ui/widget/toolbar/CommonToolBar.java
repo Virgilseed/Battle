@@ -64,8 +64,6 @@ public class CommonToolBar extends LinearLayout implements View.OnClickListener 
         rightTextView = (TextView) findViewById(R.id.ec_common_navi_right);
         rightTextView.setOnClickListener(this);
 
-        titleDrawable = (ImageView) findViewById(R.id.ec_common_title_progress);
-
     }
 
 

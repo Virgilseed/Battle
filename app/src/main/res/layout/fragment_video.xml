@@ -4,15 +4,15 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <!--<com.seed.battle.ui.widget.toolbar.CommonToolBar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/dimen_50_dp"-->
-        <!--android:background="@color/colorPrimary">-->
+    <com.seed.battle.ui.widget.toolbar.CommonToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50_dp"
+        android:background="@color/colorPrimary">
 
-    <!--</com.seed.battle.ui.widget.toolbar.CommonToolBar>-->
+    </com.seed.battle.ui.widget.toolbar.CommonToolBar>
 
-    <include layout="@layout/view_common_navi"/>
+    <!--<include layout="@layout/view_common_navi"/>-->
 
     <TextView
         android:layout_width="match_parent"
